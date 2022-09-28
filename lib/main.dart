@@ -1,14 +1,40 @@
 import 'package:flutter/material.dart';
 
 void main() {
-
   var appTitle = Text("我的第一個Flutter App"),
-    hiFlutter = Text('Hi Flutter.',style: TextStyle(fontSize: 20.0,color: Colors.white,decoration: TextDecoration.underline,),);
+      hiFlutter = Text(
+        'Hi Flutter.',
+        style: TextStyle(
+          fontSize: 20.0,
+          color: Colors.black,
+          decoration: TextDecoration.underline,
+        ),
+      );
 
-  var img = Image.network("https://blogger.googleusercontent.com/img/a/AVvXsEgNVTkx3qBD3R1OHHdo66hy0arGc8TX2_DYMomwWahYIDSbPxcEfoIfUSoNxOKb9KrcyuSgT1BBqO7ZVQ1-WVg0aT9cfP4g8_lPvK77zywz6spPDRF_tRAhh4hoOHqMcHCGqa1M3Uv9xyfg1zar0QcZq1wUkmViwhTrl87_hevR--BhElMzWy-PA2-skw=s400");
-  var appBody = Center(child: img);
-  var appBar = AppBar(title: appTitle,backgroundColor: Colors.black38);
-  var app = MaterialApp(home: Scaffold(appBar: appBar, body: appBody,backgroundColor: Colors.blueGrey));
+  // var img = Image.network("https://blogger.googleusercontent.com/img/a/AVvXsEgNVTkx3qBD3R1OHHdo66hy0arGc8TX2_DYMomwWahYIDSbPxcEfoIfUSoNxOKb9KrcyuSgT1BBqO7ZVQ1-WVg0aT9cfP4g8_lPvK77zywz6spPDRF_tRAhh4hoOHqMcHCGqa1M3Uv9xyfg1zar0QcZq1wUkmViwhTrl87_hevR--BhElMzWy-PA2-skw=s400");
+
+  // var appBody = Container(
+  //   child: hiFlutter,
+  //   alignment: Alignment.topLeft,
+  //   margin: EdgeInsets.all(50.0),
+  //   color: Colors.white,
+  //   padding: EdgeInsets.fromLTRB(30.0, 30.0, 30.0, 30.0),
+  //   );
+
+  var appBody = Center(
+    child: Container(
+      margin: const EdgeInsets.all(10.0),
+      color: Colors.red,
+      width: 48.0,
+      height: 48.0,
+    ),
+  );
+
+
+  var appBar = AppBar(title: appTitle, backgroundColor: Colors.black38);
+  var app = MaterialApp(
+      home: Scaffold(
+          appBar: appBar, body: appBody, backgroundColor: Colors.blueGrey));
   // runApp(const MyApp());
   runApp(app);
 }

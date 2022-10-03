@@ -11,8 +11,7 @@ void main() {
         ),
       );
 
-  // var img = Image.network("https://blogger.googleusercontent.com/img/a/AVvXsEgNVTkx3qBD3R1OHHdo66hy0arGc8TX2_DYMomwWahYIDSbPxcEfoIfUSoNxOKb9KrcyuSgT1BBqO7ZVQ1-WVg0aT9cfP4g8_lPvK77zywz6spPDRF_tRAhh4hoOHqMcHCGqa1M3Uv9xyfg1zar0QcZq1wUkmViwhTrl87_hevR--BhElMzWy-PA2-skw=s400");
-
+  var img = Image.network("https://blogger.googleusercontent.com/img/a/AVvXsEgNVTkx3qBD3R1OHHdo66hy0arGc8TX2_DYMomwWahYIDSbPxcEfoIfUSoNxOKb9KrcyuSgT1BBqO7ZVQ1-WVg0aT9cfP4g8_lPvK77zywz6spPDRF_tRAhh4hoOHqMcHCGqa1M3Uv9xyfg1zar0QcZq1wUkmViwhTrl87_hevR--BhElMzWy-PA2-skw=s400");
   // var appBody = Container(
   //   child: hiFlutter,
   //   alignment: Alignment.topLeft,
@@ -21,15 +20,94 @@ void main() {
   //   padding: EdgeInsets.fromLTRB(30.0, 30.0, 30.0, 30.0),
   //   );
 
-  var appBody = Center(
-    child: Container(
-      margin: const EdgeInsets.all(10.0),
-      color: Colors.red,
-      width: 48.0,
-      height: 48.0,
-    ),
-  );
+  // var appBody = Center(
+  //   child: Container(
+  //     margin: const EdgeInsets.all(10.0),
+  //     color: Colors.red,
+  //     width: 48.0,
+  //     height: 48.0,
+  //   ),
+  // );
 
+  // var appBody = Row(
+  //   mainAxisAlignment: MainAxisAlignment.center,
+  //   children: const <Widget>[
+  //     // Expanded(
+  //     //   child: Text('第一行文字', style: TextStyle(fontSize: 10),),
+  //     // ),
+  //     // Expanded(
+  //     //   child: Text('第二行文字', style: TextStyle(fontSize: 20),),
+  //     // ),
+  //     // Expanded(
+  //     //   child: Text('第三行文字', style: TextStyle(fontSize: 30),),
+  //     // ),
+  //     Text('第一行文字', style: TextStyle(fontSize: 10),),
+  //     Text('第二行文字', style: TextStyle(fontSize: 20),),
+  //     Text('第三行文字', style: TextStyle(fontSize: 30),),
+  //     // Expanded(
+  //     //   child: FittedBox(
+  //     //     fit: BoxFit.contain, // otherwise the logo will be tiny
+  //     //     child: const FlutterLogo(),
+  //     //   ),
+  //     // ),
+  //   ],
+  // );
+
+  // var appBody = Column(
+  //   mainAxisAlignment: MainAxisAlignment.center,
+  //   children: const <Widget>[
+  //     Text('第一行文字', style: TextStyle(fontSize: 10),),
+  //     Text('第一行文字', style: TextStyle(fontSize: 20),),
+  //     Text('第一行文字', style: TextStyle(fontSize: 30),),
+  //
+  //     // Expanded(
+  //     //   child: FittedBox(
+  //     //     fit: BoxFit.contain, // otherwise the logo will be tiny
+  //     //     child: const FlutterLogo(),
+  //     //   ),
+  //     // ),
+  //   ],
+  // );
+
+  var appBody = GridView.count(
+    primary: false,
+    padding: const EdgeInsets.all(20),
+    crossAxisSpacing: 10,
+    mainAxisSpacing: 10,
+    crossAxisCount: 2,
+    children: <Widget>[
+      Container(
+        padding: const EdgeInsets.all(8),
+        color: Colors.teal[100],
+        child: const Text("He'd have you all unravel at the"),
+      ),
+      Container(
+        padding: const EdgeInsets.all(8),
+        color: Colors.teal[200],
+        child: const Text('Heed not the rabble'),
+      ),
+      Container(
+        padding: const EdgeInsets.all(8),
+        color: Colors.teal[300],
+        child: const Text('Sound of screams but the'),
+      ),
+      Container(
+        padding: const EdgeInsets.all(8),
+        // color: Colors.teal[400],
+        child: const FlutterLogo(),
+      ),
+      Container(
+        padding: const EdgeInsets.all(8),
+        // color: Colors.teal[500],
+        child: const FlutterLogo(),
+      ),
+      Container(
+        padding: const EdgeInsets.all(8),
+        // color: Colors.teal[600],
+        child: const FlutterLogo(),
+      ),
+    ],
+  );
 
   var appBar = AppBar(title: appTitle, backgroundColor: Colors.black38);
   var app = MaterialApp(
